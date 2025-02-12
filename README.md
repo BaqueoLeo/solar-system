@@ -1,4 +1,4 @@
-# Sistema Solar Interactivo 🌟
+# Sistema Solar Interactivo V-1🌟
 
 ## Sobre el Proyecto
 Este proyecto nació durante una noche estrellada en Guayaquil, Ecuador. Inspirado por la majestuosidad del cosmos y la belleza de nuestro sistema solar, decidí crear una representación interactiva que permitiera a otros explorar y maravillarse con los planetas y sus órbitas.
