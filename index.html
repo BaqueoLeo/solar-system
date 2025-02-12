@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar 3D</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        canvas {
+            display: block;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-color: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 5px;
+            min-width: 200px;
+        }
+        #date {
+            margin: 10px 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+        #controls {
+            margin: 10px 0;
+        }
+        #controls button {
+            background: #333;
+            border: 1px solid #555;
+            color: white;
+            padding: 5px 10px;
+            margin: 2px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #controls button:hover {
+            background: #444;
+        }
+        #instructions {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        #date-controls {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #date-controls button {
+            background: #333;
+            border: 1px solid #555;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #date-controls button:hover {
+            background: #444;
+        }
+        #dateInput {
+            background: #333;
+            border: 1px solid #555;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        Sistema Solar
+        <div id="date-controls">
+            <button id="prevDay">◀</button>
+            <input type="date" id="dateInput">
+            <button id="nextDay">▶</button>
+        </div>
+        <div id="controls">
+            <button onclick="camera.position.set(200, 150, 200)">Vista General</button>
+            <button onclick="camera.position.set(50, 20, 50)">Vista Cercana</button>
+        </div>
+        <div id="instructions">
+            • Usa el mouse para rotar la vista
+            • Rueda del mouse para zoom
+            • Click y arrastrar para mover
+            • Usa las flechas para navegar en el tiempo
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
